@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+
+:root {
+
+  --bg: #070A12;
+  --task: #0F172A;
+  --text: #ccd0d6;
+  --text1: #f0f0f0;
+
+  --purple: #a855f7;
+  --grey: #94a3b8a9;
+
+
+
+  --purple-50: #faf5ff;
+  --purple-100: #f4e8ff;
+  --purple-200: #ebd5ff;
+  --purple-300: #dab4fe;
+  --purple-400: #c184fc;
+
+  --purple: #a855f7;
+
+  --purple-600: #9133ea;
+  --purple-700: #7a22ce;
+  --purple-800: #6621a8;
+  --purple-900: #531c87;
+  --purple-950: #370764;
+
+
+
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: var(--bg);
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--purple);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-shadow: 0px 0px 30px var(--purple-400);
+}
+
+
+.logo {
+  height: 50px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-text {
+  display: flex;
+  background-color: #3b3b3b;
+  outline: none;
+  border: none;
+  padding: 15px 10px;
+  border-radius: 0px 8px 8px 0px;
+  width: 380px;
+  color: white;
+  padding-left: 5px;
+}
+
+.input-text::placeholder {
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+.input-container img {
+  width: 34px;
+  background-color: var(--purple);
+  border-radius: 8px 0px 0px 8px;
+  padding: 0.7rem;
+}
+
+.add-btn {
+  background: none;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  outline: none;
+  padding: 10px 40px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.span-name {
+  color: var(--purple);
+  font-weight: 700;
+  text-shadow: 0px 0px 30px var(--purple-400);
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.tasks-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: min(550px, 90%);
+  gap: 1rem;
+}
+
+.tasks-list li {
+  background: var(--task);
+  color: rgb(226, 226, 226);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tasks-list li p {
+  color: var(--text1);
+  width: 80%;
+  overflow: hidden;
+  word-break: break-word; /* Romper palabras largas */
+}
+
+/* ================Estilo Checkbox=================== */
+
+/* Estilos base del checkbox */
+.check-list {
+  appearance: none; /* Quita el estilo predeterminado del sistema */
+  -webkit-appearance: none; /* Para navegadores WebKit como Safari y Chrome */
+  -moz-appearance: none; /* Para navegadores basados en Gecko como Firefox */
+  position: relative;
+  width: 20px; /* Tamaño del checkbox */
+  height: 20px;
+  border: 1px solid var(--purple-200); /* Borde blanco */
+  border-radius: 3px; /* Bordes redondeados */
+  outline: none; /* Quita el contorno predeterminado */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilos cuando el checkbox está marcado */
+.check-list:checked::before {
+  content: ''; /* Agrega un contenido vacío */
+  position: absolute;
+  top: 50%; /* Posiciona en la mitad vertical */
+  left: 50%; /* Posiciona en la mitad horizontal */
+  transform: translate(-50%, -50%);
+  width: 12px; /* Tamaño del marcado de verificación */
+  height: 12px;
+  background-color: var(--purple); /* Color de fondo rosa */
+  border-radius: 2px; /* Bordes redondeados */
+}
+
+/* Estilos para el foco o hover del checkbox */
+.check-list:focus,
+.check-list:hover {
+  border-color: var(--purple); /* Cambia el borde al color rosa en foco o hover */
+}
+
+
+
+
+
+
+
+.deleteAll-btn {
+  margin-top: 30px;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, var(--purple-700) 0%,var(--purple-300) 100%);
+  background: linear-gradient(135deg, var(--purple-700) 0%, var(--purple-300) 100%);
+  outline: none;
+  border: 0px solid;
+  padding: 15px 40px;
+  border-radius: 8px;
+  color: rgb(226, 226, 226);
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  width: min(550px, 90%);
+}
+
+.deleteAll-btn:hover {
+  background: -webkit-linear-gradient(135deg, var(--purple-300) 0%, var(--purple-700) 100%);
+  background: linear-gradient(135deg, var(--purple-300) 0%, var(--purple-700) 100%);
+}
+
+.add-btn:hover {
+  border: 1px solid var(--purple-300);
+  color: var(--purple-300);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 50px 0px;
+}
+
+@media (max-width: 576px) {
+  .input-text {
+    width: 100%;
+  }
+
+  .input-container {
+    width: 95%;
+  }
+
+  .add-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .todo-container {
+    padding: 2rem 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-btn {
+    width: 95%;
+  }
+}
+
+/* error */
+#form__error {
+  color: #dc3545;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 8px 0px;
+  max-width: 350px;
+  text-align: left;
+}
+ 
